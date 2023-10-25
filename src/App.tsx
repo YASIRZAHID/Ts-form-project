@@ -1,15 +1,15 @@
 import "./App.css";
 import { useState } from "react";
-import SignupPage2 from "./components/Step2";
-import SignupPage from "./components/Step1";
-import DisplayFormValues from "./components/Step3";
+import SignupPage2 from "./components/PasswordScreen";
+import SignupPage from "./components/InitialInfo";
+import DisplayFormValues from "./components/ReviewScreen";
 import React from "react";
 type FormData = {
-  username?:string,
-  email?:string,
-  phoneNumber?:string,
-  country?:string,
-  password?:string
+  username?: string;
+  email?: string;
+  phoneNumber?: string;
+  country?: string;
+  password?: string;
 };
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
   const nextStep = () => {
     setStep(step + 1);
   };
-  const data:FormData={};
+  const data: FormData = {};
   const [formData, setFormData] = useState(data);
   return (
     <div className="App min-h-screen ">
